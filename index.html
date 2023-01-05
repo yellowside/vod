@@ -18,7 +18,6 @@ body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,bu
 .btn{width:5px 10px;color: #FFF;background: #FF9735;border-color: #FF9735;}
 .btn:hover {width:5px 10px;color: #FFF;background: #CF6B0C;border-color:: #CF6B0C;}
 .panel-body{width:1138px;height:630px;padding:15px}
-#jiekou iframe{width:1108px;height:600px;}
 .select{/* height:34px; */line-height:36px;display: inline-block;background:#0078D4;}
 .select *{border:1px solid red;}
 .tips {width: 1160px;/* padding-right: 15px; *//* padding-left:15px; */margin-right:auto;margin-left: -10px;margin-top: 40px;}
@@ -28,25 +27,21 @@ body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,bu
 .panel,.btn-default{ border-radius:0px}
 @media screen and (max-width:434px) {
 .panel-body{width:100%;height:250px;padding:10px}
-#jiekou iframe{width:100%px;height:220px;}
 }
 @media screen and (max-width:995px) { 
 .container ul{display:none}
 .panel-body{width:100%;height:250px;padding:10px}
-#jiekou iframe{width:100%px;height:220px;}
 }
 @media screen and (max-width:1200px) { 
 .col-md-10{padding-left:0px;padding-right:0px}
 .column form{width: 955px;padding-bottom: 10px;}
 .tips{display:none}
 .panel-body{width:100%;height:250px;padding:10px}
-#jiekou iframe{width:100%px;height:220px;}
 }
 @media screen and (max-width:990px) { 
 .col-md-3,.col-md-10,.col-md-2{padding-left:0px;padding-right:0px}
 .column form{width: 100%;padding-bottom: 10px;}
 .panel-body{width:100%;height:250px;padding:10px}
-#jiekou iframe{width:100%px;height:220px;}
 }
 </style>
 <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -55,16 +50,14 @@ body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,bu
 <!--top-->
 <div class="header">
   <div class="top clearfix">
-    <h1 class="logo"><a href="https://bingdou.vip/"title="冰豆云播"><i class="fa fa-play-circle"></i>冰豆云播</a></h1>
+    <h1 class="logo"><a href="./"title="冰豆云播"><i class="fa fa-play-circle"></i>冰豆云播</a></h1>
     <div class="brand">悦享慢生活<br>bingdou.vip</div>
     <ul class="site-nav site-navbar">
-        <li class="navto-li"><a href="https://tao.bingdou.com.cn/" target="_blank"><font color='#FF0033'><i class="fa fa-shopping-cart"></i> 精选</font></a></li>
-        <li class="navto-li"><a href="https://fuli.qianqi.net" target="_blank"><font color='#FE8B1F'><i class="fa fa-gift"></i> 福利</font></a></li>
-        <li class="navto-li"><a href="https://bd.jx.cn/douyin/" target="_blank"><i class="fa fa-play-circle-o"></i> 快抖MM</a></li>
-        <!--<li class="navto-li"><a href="https://v.bingdou.wang/" target="_blank"><i class="fa fa-universal-access"></i> 男神</a></li>-->
-        <li class="navto-li"><a href="https://music.bingdou.xyz/" target="_blank"><i class="fa fa-music"></i> 音乐</a></li>
-		<li class="navto-li"><a href="https://v.bingdou.xyz" target="_blank"><i class="fa fa-film"></i> 影院</a></li>
-		<li class="navto-li"><a href="https://www.bingdou.wang/" target="_blank"><i class="fa fa-video-camera"></i> 直播</a></li>
+        <li class="navto-li"><a href="https://tao.bingdou.com.cn/" target="_blank"><font color='#FF0033'><i class="fa fa-shopping-cart"></i> 精选购物</font></a></li>
+        <li class="navto-li"><a href="https://fuli.fanbing.cc/" target="_blank"><font color='#FE8B1F'><i class="fa fa-gift"></i> 每日福利</font></a></li>
+        <li class="navto-li"><a href="https://music.bingdou.xyz/" target="_blank"><i class="fa fa-music"></i> 音乐聆听</a></li>
+		<li class="navto-li"><a href="https://www.misige.cn/" target="_blank"><i class="fa fa-film"></i> 免费影院</a></li>
+		<li class="navto-li"><a href="https://www.bingdou.wang/" target="_blank"><i class="fa fa-video-camera"></i> 影视直播</a></li>
     </ul>
     <div class="topbar">
       <ul class="site-nav topmenu">
@@ -72,8 +65,8 @@ body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,bu
 		<li><a onClick="AddFavorite(window.location,document.title)" title="加入收藏夹"><i class="fa fa-folder-open-o"></i> 收藏网站</a></li>
         <li class="gz"> <a><i class="fa fa-reorder"></i> 更多服务 <i class="fa fa-angle-down"></i></a>
           <ul class="sub-menu">
-            <li><a target="_blank" href="https://bingdou.xyz/"> 搜索</a></li>
-			<li><a target="_blank" href="https://www.3600.win/"> 导航</a></li>
+           <li><a target="_blank" href="https://www.bingdou.xyz/"> 全能搜索</a></li>
+			<li><a target="_blank" href="https://www.3600.win/"> 实用导航</a></li>
           </ul>
         </li>
       </ul>
@@ -82,11 +75,9 @@ body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,bu
 </div>
 <div class="minnav"><i class="fa fa-list-ul"></i></div>
 <ul class="minul">
-  <li><a href="https://bd.jx.cn/douyin/" target="_blank"><i class="fa fa-play-circle-o"></i> 快抖MM</a></li>
   <li><a href="https://music.bingdou.xyz/" target="_blank"><i class="fa fa-music"></i> 音乐</a></li>
-  <li><a href="https://v.bingdou.xyz/" target="_blank"><i class="fa fa-film"></i> 影院</a></li>
-  <!--<li><a href="https://v.bingdou.wang/" target="_blank"><i class="fa fa-universal-access"></i> 男神</a></li>-->
-  <li><a href="https://fuli.qianqi.net" target="_blank"><i class="fa fa-gift"></i> 福利</a></li>
+  <li><a href="https://www.misige.cn/" target="_blank"><i class="fa fa-film"></i> 影院</a></li>
+  <li><a href="https://fuli.fanbing.cc/" target="_blank"><i class="fa fa-gift"></i> 福利</a></li>
   <li><a href="https://tao.bingdou.com.cn/" target="_blank"><i class="fa fa-shopping-cart"></i> 精选</a></li>
   <li><a href="https://bingdou.wang/" target="_blank"><i class="fa fa-video-camera"></i> 直播</a></li>
 </ul>
