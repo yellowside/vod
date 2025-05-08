@@ -83,7 +83,7 @@ function getQueryParam(name) {
 const purl = getQueryParam('url');
 const playbox = document.getElementById('playbox');
 
-if (playbox && purl) {
+if (playbox) {
     const iframe = document.createElement('iframe');
     iframe.width = "100%";
     iframe.height = "100%";
@@ -91,7 +91,13 @@ if (playbox && purl) {
     iframe.allowFullscreen = true;
     iframe.frameBorder = "0";
     iframe.scrolling = "no";
-    iframe.src = `//player.bingdou.vip/?url=${encodeURIComponent(decodeURIComponent(purl))}`;
+
+    // 判断是否有 url 参数
+    if (purl) {
+        iframe.src = `//player.bingdou.vip/?url=${encodeURIComponent(decodeURIComponent(purl))}`;
+    } else {
+        iframe.src = `//player.bingdou.vip/`; // 不带参数打开 player 页面
+    }
 
     playbox.appendChild(iframe);
 } else {
