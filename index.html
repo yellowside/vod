@@ -74,19 +74,33 @@
 </div>
 </main>
 <script type="text/javascript">
-function _get(name){
-     var result = location.search.match(new RegExp("[\?\&]" + name+ "=([^\&]+)","i"));
-     if(result == null || result.length < 1){
-         return "";
-     }
-     return decodeURIComponent(result[1])
+function getQueryParam(name) {
+    const search = window.location.search || ('#' + window.location.hash.split('#')[1]).split('?')[1] || '';
+    const params = new URLSearchParams(search);
+    return params.get(name) || '';
 }
-var purl = _get('url');
-document.getElementById('playbox').innerHTML='<iframe width="100%" height="100%" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" src="//player.bingdou.vip/?url='+purl+'"></iframe>';
+
+const purl = getQueryParam('url');
+const playbox = document.getElementById('playbox');
+
+if (playbox && purl) {
+    const iframe = document.createElement('iframe');
+    iframe.width = "100%";
+    iframe.height = "100%";
+    iframe.allowTransparency = true;
+    iframe.allowFullscreen = true;
+    iframe.frameBorder = "0";
+    iframe.scrolling = "no";
+    iframe.src = `//player.bingdou.vip/?url=${encodeURIComponent(decodeURIComponent(purl))}`;
+
+    playbox.appendChild(iframe);
+} else {
+    console.warn("not found");
+}
 </script>
 <footer>
 <p><a href="https://www.huangbin.net/" target="_blank">关于我们</a> | <a href="https://api.qianqi.net/qq/im/?qq=77696199" target="_blank">联系我们</a> | <a href="https://www.bingdou.com.cn/news/385.html" target="_blank">解析接口</a></p>
-<p>Copyright &copy; 2012-<script type="text/javascript">copyright=new Date();update=copyright.getFullYear();document.write(""+ update + "");</script> bingdou.vip, All Rights Reserved.</p>
+<p>Copyright &copy; 2012-<script>const currentYear = new Date().getFullYear();document.write(currentYear);</script> bingdou.vip, All Rights Reserved.</p>
 </footer>
 <script>
 var _hmt = _hmt || [];
