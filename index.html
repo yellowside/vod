@@ -84,7 +84,7 @@ if (playbox) {
     if (purl) {
         iframe.src = `https://player.bingdou.vip/?url=${encodeURIComponent(decodeURIComponent(purl))}`;
     } else {
-        iframe.src = `https://player.bingdou.vip/`; // 不带参数打开 player 页面
+        iframe.src = `https://player.bingdou.vip/?url=`; // 不带参数打开 player 页面
     }
 
     playbox.appendChild(iframe);
