@@ -19,12 +19,12 @@
 <div class="menu-icon"></div>
 <div class="menu-container">
 <a href="https://www.bingdou.vip/" class="menu-item"><div class="menu-item-name">视频云播</div></a>
-<a href="http://www.bingdou.live/movie/" class="menu-item"><div class="menu-item-name">影视点播</div></a>
-<a href="http://www.bingdou.live/huya/" class="menu-item"><div class="menu-item-name">聚合直播</div></a>
-<a href="http://www.bingdou.live/tv/" class="menu-item"><div class="menu-item-name">电视直播</div></a>
-<a href="http://www.bingdou.live/livechina/" class="menu-item"><div class="menu-item-name">景点直播</div></a>
-<a href="http://www.bingdou.live/fm/" class="menu-item"><div class="menu-item-name">电台直播</div></a>
-<a href="http://www.bingdou.live/music/" class="menu-item"><div class="menu-item-name">音乐聆听</div></a>
+<a href="https://www.bingdou.live/movie/" class="menu-item"><div class="menu-item-name">影视点播</div></a>
+<a href="https://www.bingdou.live/huya/" class="menu-item"><div class="menu-item-name">聚合直播</div></a>
+<a href="https://www.bingdou.live/tv/" class="menu-item"><div class="menu-item-name">电视直播</div></a>
+<a href="https://www.bingdou.live/livechina/" class="menu-item"><div class="menu-item-name">景点直播</div></a>
+<a href="https://www.bingdou.live/fm/" class="menu-item"><div class="menu-item-name">电台直播</div></a>
+<a href="https://www.bingdou.live/music/" class="menu-item"><div class="menu-item-name">音乐聆听</div></a>
 <a href="https://www.3600.win/" class="menu-item" target="_blank"><div class="menu-item-name">实用导航</div></a>
 <a href="https://fuli.fanbing.cc/" class="menu-item" target="_blank"><div class="menu-item-name">精选福利</div></a>
 </div>
@@ -94,8 +94,58 @@ if (playbox) {
 </script>
 <footer>
 <p><a href="https://www.huangbin.net/" target="_blank">关于我们</a> | <a href="https://api.qianqi.net/qq/im/?qq=77696199" target="_blank">联系我们</a> | <a href="https://www.bingdou.com.cn/news/385.html" target="_blank">解析接口</a></p>
-<p>Copyright &copy; 2012-<script>const currentYear = new Date().getFullYear();document.write(currentYear);</script> bingdou.vip, All Rights Reserved.</p>
+<p>&copy; 2012-<script>const currentYear = new Date().getFullYear();document.write(currentYear);</script> bingdou.vip, All Rights Reserved.</p>
 </footer>
+<script>
+     const scriptEl = document.createElement("script")
+     scriptEl.src = "https://cdn.iocdn.cc/npm/lingjing-agent@1.0.12/dist/js/index.global.js"
+     document.body.appendChild(scriptEl)
+     scriptEl.onload = () =>{
+         const chat = new LingJingAgent.Chat({
+             agentId,
+             uid,
+             container: undefined,
+             entry: {
+                 container: undefined,
+                 image: undefined,
+             },
+         });
+         chat.showEntry();
+     }
+</script>
+<script>
+const agentId = "eIjz24RwRL5Kwz0jaog5ukGzfdxcslRr"
+const uidKey = "lj_chat_uid"
+const uidExpire = 3600*24*10
+var uid =  getCookie(uidKey);
+if (!uid) {
+    uid = generateUUID();
+    setCookie(uidKey,uid,uidExpire);
+}
+function generateUUID() {
+    var d = new Date().getTime();
+    if (window.performance && typeof window.performance.now === "function") {
+        d += performance.now();
+    }
+    var uuid = '-xxxxxxxxxx'.replace(/[x]/g, function (c) {
+        var r = (d + Math.random() * 10) % 10 | 0;
+        return r;
+    });
+    return Number(uuid);
+}
+function setCookie(name, value, duration) {
+    var exp = new Date();
+    exp.setTime(exp.getTime() + duration * 1000);
+    document.cookie =
+        name + "=" + escape(value) + ";expires=" + exp.toGMTString()+";path=/";
+}
+function getCookie(name) {
+    var arr,
+        reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+    if ((arr = document.cookie.match(reg))) return unescape(arr[2]);
+    else return null;
+}
+</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
